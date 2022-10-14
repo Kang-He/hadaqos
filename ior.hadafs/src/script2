@@ -1,0 +1,18 @@
+=============> start script <=============
+IOR START
+    api=POSIX
+    hintsFileName=hintsFile
+    testFile=/tmp/gfsfile/iortest/test2
+    repetitions=1
+    writeFile=1
+    randomOffset=0
+    filePerProc=1
+    useO_DIRECT=1
+    verbose=1
+    keepFile=1
+    segmentCount=1
+    blockSize=10000m
+    transferSize=1048576
+    collective=0
+IOR STOP
+=============> stop script  <===========

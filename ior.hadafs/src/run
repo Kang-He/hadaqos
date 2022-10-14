@@ -1,0 +1,1 @@
+bsub -b -I -q $1 -N $2 -np $3 -node 122041 -health 2 -o run.log -cgsp 1 -share_size 12000 ./ior -f ./$4

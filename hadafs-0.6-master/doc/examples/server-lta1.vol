@@ -1,0 +1,70 @@
+volume gmdb1
+ type protocol/client
+ option transport-type socket
+ option remote-port 8150
+ option ping-timeout 900
+ option remote-host 127.0.0.1
+ option remote-subvolume gmdb
+end-volume
+
+volume gmdb2
+ type protocol/client
+ option transport-type socket
+ option remote-port 8200
+ option ping-timeout 900
+ option remote-host 127.0.0.1
+ option remote-subvolume gmdb
+end-volume
+
+volume gns
+ type cluster/gns
+ subvolumes gmdb1 gmdb2 
+end-volume
+
+volume gdata1
+ type protocol/client
+ option transport-type socket
+ option remote-port 8250
+ option ping-timeout 900
+ option remote-host 127.0.0.1
+ option remote-subvolume lta
+end-volume
+
+
+volume brick
+ type storage/posix
+ option directory /mnt/nvme0n1/hadaexport1
+end-volume
+
+volume lns
+ type storage/rocksdb
+ option rocksdb-path /mnt/nvme0n1/rocksdb/lmdb1
+ option rocksdb-port 22
+end-volume
+
+volume gdata2
+ type cluster/lvolume
+ option local-name-server lns
+ subvolumes brick
+end-volume
+
+volume gvolume
+ type cluster/gvolume
+ subvolumes gdata1 gdata2
+end-volume
+
+volume lta
+ type cluster/lta
+ option global-name-server gns
+ option local-volume gdata2
+ option metadata-mode part_async
+ subvolumes gvolume
+end-volume
+
+volume server
+ type protocol/server
+ option transport-type socket
+ option transport.socket.listen-port 8350
+ subvolumes lta
+ option auth.addr.lta.allow *
+end-volume

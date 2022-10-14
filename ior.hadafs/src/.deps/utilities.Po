@@ -1,0 +1,293 @@
+utilities.o: utilities.c \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdc-predef.h config.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdio.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/features.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/cdefs.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/wordsize.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/gnu/stubs.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include/stddef.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/types.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/typesizes.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/libio.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/_G_config.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/wchar.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include/stdarg.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdio_lim.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sys_errlist.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdio.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdlib.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/waitflags.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/waitstatus.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/endian.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/endian.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/byteswap.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/byteswap-16.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/types.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/time.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/select.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/select.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigset.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/time.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/sysmacros.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/pthreadtypes.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/alloca.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdlib-bsearch.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdlib-float.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/errno.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/errno.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/linux/errno.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm/errno.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm-generic/errno-base.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/fcntl.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/fcntl.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/fcntl-linux.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stat.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/math.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/math-vector.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/huge_val.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/huge_valf.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/huge_vall.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/inf.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/nan.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/mathdef.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/mathcalls.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/mathinline.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/string.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/xlocale.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/string.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/string2.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/stat.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/regex.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/statfs.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/statfs.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/time.h utilities.h \
+ /usr/sw/mpi/mpisw9gcc_20200628/include/mpi.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include/stdint.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdint.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/wchar.h \
+ /usr/sw/mpi/mpisw9gcc_20200628/include/mpio.h \
+ /usr/sw/mpi/mpisw9gcc_20200628/include/mpi.h ior.h iordef.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/param.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed/limits.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed/syslimits.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/limits.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/posix1_lim.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/local_lim.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/linux/limits.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/posix2_lim.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/signal.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/signum.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/siginfo.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigaction.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigcontext.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm/sigcontext.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigstack.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/ucontext.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigthread.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/param.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/linux/param.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm/param.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/unistd.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/posix_opt.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/environments.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/confname.h \
+ /usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/getopt.h aiori.h
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdc-predef.h:
+
+config.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdio.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/features.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/cdefs.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/wordsize.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/gnu/stubs.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include/stddef.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/types.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/typesizes.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/libio.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/_G_config.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/wchar.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include/stdarg.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdio_lim.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sys_errlist.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdio.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdlib.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/waitflags.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/waitstatus.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/endian.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/endian.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/byteswap.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/byteswap-16.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/types.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/time.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/select.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/select.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigset.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/time.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/sysmacros.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/pthreadtypes.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/alloca.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdlib-bsearch.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stdlib-float.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/errno.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/errno.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/linux/errno.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm/errno.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm-generic/errno-base.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/fcntl.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/fcntl.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/fcntl-linux.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/stat.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/math.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/math-vector.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/huge_val.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/huge_valf.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/huge_vall.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/inf.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/nan.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/mathdef.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/mathcalls.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/mathinline.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/string.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/xlocale.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/string.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/string2.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/stat.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/regex.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/statfs.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/statfs.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/time.h:
+
+utilities.h:
+
+/usr/sw/mpi/mpisw9gcc_20200628/include/mpi.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include/stdint.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/stdint.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/wchar.h:
+
+/usr/sw/mpi/mpisw9gcc_20200628/include/mpio.h:
+
+/usr/sw/mpi/mpisw9gcc_20200628/include/mpi.h:
+
+ior.h:
+
+iordef.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/param.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed/limits.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed/syslimits.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/limits.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/posix1_lim.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/local_lim.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/linux/limits.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/posix2_lim.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/signal.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/signum.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/siginfo.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigaction.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigcontext.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm/sigcontext.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigstack.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/sys/ucontext.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/sigthread.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/param.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/linux/param.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/asm/param.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/unistd.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/posix_opt.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/environments.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/bits/confname.h:
+
+/usr/sw/swgcc/swgcc710-tools-9A-916/usr/include/getopt.h:
+
+aiori.h:

@@ -1,0 +1,13 @@
+volume gmdb
+ type storage/rocksdb
+ option rocksdb-path /mnt/nvme0n1/rocksdb/gmdb1
+ option rocksdb-port 22
+end-volume
+
+volume server
+ type protocol/server
+ option transport-type socket
+ option transport.socket.listen-port 8150
+ subvolumes gmdb
+ option auth.addr.gmdb.allow *
+end-volume

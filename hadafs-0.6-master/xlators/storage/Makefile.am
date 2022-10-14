@@ -1,0 +1,3 @@
+SUBDIRS = posix rocksdb
+
+CLEANFILES = 

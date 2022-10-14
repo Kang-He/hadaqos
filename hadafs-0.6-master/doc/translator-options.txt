@@ -1,0 +1,221 @@
+mount/fuse:
+	* direct-io-mode            HF_OPTION_TYPE_BOOL   on|off|yes|no
+	* macfuse-local             HF_OPTION_TYPE_BOOL   on|off|yes|no
+	* mount-point (mountpoint)  HF_OPTION_TYPE_PATH   <any-posix-valid-path>
+	* attribute-timeout         HF_OPTION_TYPE_DOUBLE   0.0 
+	* entry-timeout             HF_OPTION_TYPE_DOUBLE   0.0
+
+protocol/server:
+ 	* transport-type            HF_OPTION_TYPE_STR    tcp|socket|ib-verbs|unix|ib-sdp|
+	  			    			  tcp/client|ib-verbs/client
+        * volume-filename.*         HF_OPTION_TYPE_PATH
+	* inode-lru-limit           HF_OPTION_TYPE_INT    0-(1 * HF_UNIT_MB)
+	* client-volume-filename    HF_OPTION_TYPE_PATH
+
+protocol/client:
+	* username                  HF_OPTION_TYPE_ANY
+	* password                  HF_OPTION_TYPE_ANY 
+	* transport-type            HF_OPTION_TYPE_STR   tcp|socket|ib-verbs|unix|ib-sdp|
+	  			    			 tcp/client|ib-verbs/client
+	* remote-host               HF_OPTION_TYPE_ANY 
+	* remote-subvolume          HF_OPTION_TYPE_ANY 
+	* transport-timeout         HF_OPTION_TYPE_TIME  5-1013 
+
+cluster/replicate:
+	* read-subvolume	    HF_OPTION_TYPE_XLATOR
+	* favorite-child 	    HF_OPTION_TYPE_XLATOR
+	* data-self-heal 	    HF_OPTION_TYPE_BOOL 
+	* metadata-self-heal 	    HF_OPTION_TYPE_BOOL
+	* entry-self-heal 	    HF_OPTION_TYPE_BOOL 
+	* data-change-log 	    HF_OPTION_TYPE_BOOL 
+	* metadata-change-log 	    HF_OPTION_TYPE_BOOL
+	* entry-change-log 	    HF_OPTION_TYPE_BOOL
+	* data-lock-server-count    HF_OPTION_TYPE_INT    0
+	* metadata-lock-server-count HF_OPTION_TYPE_INT   0
+	* entry-lock-server-count    HF_OPTION_TYPE_INT   0
+
+cluster/distribute:
+	* lookup-unhashed           HF_OPTION_TYPE_BOOL 
+
+cluster/unify:
+	* namespace		    HF_OPTION_TYPE_XLATOR 
+	* scheduler 		    HF_OPTION_TYPE_STR    alu|rr|random|nufa|switch 
+	* self-heal 		    HF_OPTION_TYPE_STR    foreground|background|off
+	* optimist  		    HF_OPTION_TYPE_BOOL 
+
+cluster/nufa:
+	local-volume-name           HF_OPTION_TYPE_XLATOR 
+
+cluster/stripe:
+	* block-size		    HF_OPTION_TYPE_ANY 
+	* use-xattr  		    HF_OPTION_TYPE_BOOL
+
+debug/trace:
+	* include-ops (include)     HF_OPTION_TYPE_STR
+	* exclude-ops (exclude)     HF_OPTION_TYPE_STR 
+
+encryption/rot-13:
+	* encrypt-write             HF_OPTION_TYPE_BOOL
+	* decrypt-read  	    HF_OPTION_TYPE_BOOL 
+
+features/path-convertor:
+	* start-offset              HF_OPTION_TYPE_INT     0-4095 
+	* end-offset 		    HF_OPTION_TYPE_INT	   1-4096 
+	* replace-with		    HF_OPTION_TYPE_ANY
+
+features/trash:
+	* trash-dir	            HF_OPTION_TYPE_PATH 
+
+features/locks:
+	* mandatory-locks (mandatory) HF_OPTION_TYPE_BOOL 
+
+features/filter:
+	* root-squashing	    HF_OPTION_TYPE_BOOL 
+	* read-only                 HF_OPTION_TYPE_BOOL
+	* fixed-uid		    HF_OPTION_TYPE_INT
+	* fixed-gid		    HF_OPTION_TYPE_INT
+	* translate-uid             HF_OPTION_TYPE_ANY 
+	* translate-gid		    HF_OPTION_TYPE_ANY
+	* filter-uid		    HF_OPTION_TYPE_ANY 
+	* filter-gid		    HF_OPTION_TYPE_ANY 
+
+features/quota:
+	* min-free-disk-limit	    HF_OPTION_TYPE_PERCENT
+	* refresh-interval	    HF_OPTION_TYPE_TIME
+	* disk-usage-limit	    HF_OPTION_TYPE_SIZET 
+
+storage/posix:
+	* o-direct		    HF_OPTION_TYPE_BOOL
+	* directory		    HF_OPTION_TYPE_PATH
+	* export-statfs-size	    HF_OPTION_TYPE_BOOL
+	* mandate-attribute	    HF_OPTION_TYPE_BOOL
+
+storage/bdb:
+	* directory                 HF_OPTION_TYPE_PATH
+	* logdir		    HF_OPTION_TYPE_PATH
+	* errfile		    HF_OPTION_TYPE_PATH
+	* dir-mode		    HF_OPTION_TYPE_ANY
+	* file-mode		    HF_OPTION_TYPE_ANY
+	* page-size		    HF_OPTION_TYPE_SIZET
+	* lru-limit		    HF_OPTION_TYPE_INT
+	* lock-timeout		    HF_OPTION_TYPE_TIME
+	* checkpoint-timeout	    HF_OPTION_TYPE_TIME
+	* transaction-timeout	    HF_OPTION_TYPE_TIME
+	* mode			    HF_OPTION_TYPE_BOOL
+	* access-mode		    HF_OPTION_TYPE_STR
+
+performance/read-ahead:
+	* force-atime-update        HF_OPTION_TYPE_BOOL 
+	* page-size		    HF_OPTION_TYPE_SIZET (64 * HF_UNIT_KB)-(2 * HF_UNIT_MB)
+	* page-count		    HF_OPTION_TYPE_INT   1-16 
+
+performance/write-behind:
+	* flush-behind		    HF_OPTION_TYPE_BOOL
+	* aggregate-size	    HF_OPTION_TYPE_SIZET  (128 * HF_UNIT_KB)-(4 * HF_UNIT_MB) 
+	* window-size		    HF_OPTION_TYPE_SIZET  (512 * HF_UNIT_KB)-(1 * HF_UNIT_GB) 
+	* enable-O_SYNC		    HF_OPTION_TYPE_BOOL  
+	* disable-for-first-nbytes  HF_OPTION_TYPE_SIZET  1 - (1 * HF_UNIT_MB) 
+
+performance/symlink-cache:
+
+performance/io-threads:
+	* thread-count	            HF_OPTION_TYPE_INT    1-32
+
+performance/io-cache:
+	* priority	            HF_OPTION_TYPE_ANY 
+	* cache-timeout (force-revalidate-timeout) HF_OPTION_TYPE_INT 0-60 
+	* page-size	            HF_OPTION_TYPE_SIZET  (16 * HF_UNIT_KB)-(4 * HF_UNIT_MB) 
+        * cache-size                HF_OPTION_TYPE_SIZET  (4 * HF_UNIT_MB)-(6 * HF_UNIT_GB)
+
+auth:
+- addr:
+	* auth.addr.*.allow	    HF_OPTION_TYPE_ANY 
+	* auth.addr.*.reject	    HF_OPTION_TYPE_ANY 
+
+- login:
+	* auth.login.*.allow	    HF_OPTION_TYPE_ANY 
+	* auth.login.*.password	    HF_OPTION_TYPE_ANY
+
+scheduler/alu:
+	* scheduler.alu.order (alu.order) 
+	                            HF_OPTION_TYPE_ANY 
+	* scheduler.alu.disk-usage.entry-threshold (alu.disk-usage.entry-threshold)
+	  			    HF_OPTION_TYPE_SIZET
+        * scheduler.alu.disk-usage.exit-threshold (alu.disk-usage.exit-threshold)
+                                    HF_OPTION_TYPE_SIZET
+        * scheduler.alu.write-usage.entry-threshold (alu.write-usage.entry-threshold)
+                                    HF_OPTION_TYPE_SIZET
+        * scheduler.alu.write-usage.exit-threshold (alu.write-usage.exit-threshold)
+                                    HF_OPTION_TYPE_SIZET 
+        * scheduler.alu.read-usage.entry-threshold (alu.read-usage.entry-threshold)
+                                    HF_OPTION_TYPE_SIZET
+        * scheduler.alu.read-usage.exit-threshold (alu.read-usage.exit-threshold)
+                                    HF_OPTION_TYPE_SIZET 
+        * scheduler.alu.open-files-usage.entry-threshold (alu.open-files-usage.entry-threshold)
+                                    HF_OPTION_TYPE_INT
+        * scheduler.alu.open-files-usage.exit-threshold (alu.open-files-usage.exit-threshold)
+                                    HF_OPTION_TYPE_INT 
+        * scheduler.read-only-subvolumes (alu.read-only-subvolumes)
+                                    HF_OPTION_TYPE_ANY 
+        * scheduler.refresh-interval (alu.refresh-interval)
+                                    HF_OPTION_TYPE_TIME
+        * scheduler.limits.min-free-disk (alu.limits.min-free-disk)
+                                    HF_OPTION_TYPE_PERCENT
+        * scheduler.alu.stat-refresh.num-file-create (alu.stat-refresh.num-file-create)
+                                    HF_OPTION_TYPE_INT
+
+scheduler/nufa:
+	* scheduler.refresh-interval (nufa.refresh-interval) 
+	                            HF_OPTION_TYPE_TIME
+	* scheduler.limits.min-free-disk (nufa.limits.min-free-disk) 
+	                            HF_OPTION_TYPE_PERCENT
+	* scheduler.local-volume-name (nufa.local-volume-name) 
+	                            HF_OPTION_TYPE_XLATOR
+
+scheduler/random:
+	* scheduler.refresh-interval (random.refresh-interval) HF_OPTION_TYPE_TIME
+	* scheduler.limits.min-free-disk (random.limits.min-free-disk) HF_OPTION_TYPE_PERCENT
+
+scheduler/rr:
+	* scheduler.refresh-interval (rr.refresh-interval)  HF_OPTION_TYPE_TIME
+	* scheduler.limits.min-free-disk (rr.limits.min-free-disk) HF_OPTION_TYPE_PERCENT
+	* scheduler.read-only-subvolumes (rr.read-only-subvolumes) HF_OPTION_TYPE_ANY
+
+scheduler/switch:
+	* scheduler.read-only-subvolumes (switch.read-only-subvolumes) HF_OPTION_TYPE_ANY
+	* scheduler.local-volume-name (switch.nufa.local-volume-name) HF_OPTION_TYPE_XLATOR
+	* scheduler.switch.case (switch.case) HF_OPTION_TYPE_ANY
+
+transport/ib-verbs:
+	* transport.ib-verbs.port (ib-verbs-port) HF_OPTION_TYPE_INT 1-4
+	                         check the option by 'ibv_devinfo'
+        * transport.ib-verbs.mtu (ib-verbs-mtu) HF_OPTION_TYPE_INT
+	* transport.ib-verbs.device-name (ib-verbs-device-name) HF_OPTION_TYPE_ANY,
+                                 check by 'ibv_devinfo'
+        * transport.ib-verbs.work-request-send-size (ib-verbs-work-request-send-size)
+	                         HF_OPTION_TYPE_INT,
+        * transport.ib-verbs.work-request-recv-size (ib-verbs-work-request-recv-size)
+	                         HF_OPTION_TYPE_INT
+        * transport.ib-verbs.work-request-send-count (ib-verbs-work-request-send-count)
+                                 HF_OPTION_TYPE_INT
+        * transport.ib-verbs.work-request-recv-count (ib-verbs-work-request-recv-count)
+                                 HF_OPTION_TYPE_INT
+        * remote-port (transport.remote-port,transport.ib-verbs.remote-port)
+	                         HF_OPTION_TYPE_INT 
+        * transport.ib-verbs.listen-port  HF_OPTION_TYPE_INT 
+        * transport.ib-verbs.connect-path (connect-path) HF_OPTION_TYPE_ANY 
+        * transport.ib-verbs.bind-path (bind-path) HF_OPTION_TYPE_ANY 
+        * transport.ib-verbs.listen-path (listen-path) HF_OPTION_TYPE_ANY 
+        * transport.address-family (address-family) HF_OPTION_TYPE_STR inet|inet6|inet/inet6|
+                                                                       inet6/inet|unix|inet-sdp
+
+transport/socket:
+	* transport.remote-port (remote-port,transport.socket.remote-port) HF_OPTION_TYPE_INT 
+	* transport.socket.listen-port (listen-port) HF_OPTION_TYPE_INT 
+	* transport.socket.bind-address (bind-address) HF_OPTION_TYPE_ANY 
+	* transport.socket.connect-path (connect-path) HF_OPTION_TYPE_ANY 
+	* transport.socket.bind-path (bind-path)       HF_OPTION_TYPE_ANY 
+	* transport.socket.listen-path (listen-path)   HF_OPTION_TYPE_ANY
+	* transport.address-family (address-family)    HF_OPTION_TYPE_STR  inet|inet6|
+	  			   		       			   inet/inet6|inet6/inet|
+									   unix|inet-sdp
